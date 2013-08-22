@@ -5,6 +5,7 @@ import android.opengl.GLSurfaceView.Renderer;
 import android.opengl.Matrix;
 import android.util.Log;
 import scorched.engine.Game;
+import scorched.engine.interfaces.ICameraObject;
 import scorched.engine.interfaces.IGameObject;
 
 import javax.microedition.khronos.egl.EGLConfig;
@@ -24,7 +25,12 @@ public class DefaultRenderer implements Renderer
     private final float[] mVMatrix = new float[16];
     private final float[] mRotationMatrix = new float[16];
 
+    private ICameraObject camera;
 
+    public void setCamera(ICameraObject _camera)
+    {
+        camera = _camera;
+    }
 
     @Override
     public void onSurfaceCreated(GL10 gl, EGLConfig config)
@@ -51,10 +57,12 @@ public class DefaultRenderer implements Renderer
         projectionMatrix[11] = -1.0f;
         projectionMatrix[14] = -0.20002000033855438f;
 
-        Matrix.setLookAtM(mVMatrix, 0, 0, 0, -3, 0f, 0f, 0f, 0f, 1.0f, 0.0f);
-        //Matrix.setIdentityM(mVMatrix, 0);
+        camera.setProjection(projectionMatrix);
 
-        Matrix.multiplyMM(mvpMatrix, 0, projectionMatrix, 0, mVMatrix, 0);
+        Matrix.setLookAtM(mVMatrix, 0, 0, 0, -3, 0f, 0f, 0f, 0f, 1.0f, 0.0f);
+        Matrix.setIdentityM(mVMatrix, 0);
+
+        camera.setModelView(mVMatrix);
     }
 
     public void onUpdateFrame()
@@ -73,7 +81,7 @@ public class DefaultRenderer implements Renderer
 
         for(IGameObject object : Game.gameObjects)
         {
-            object.draw(mvpMatrix);
+            object.draw(camera);
         }
     }
 

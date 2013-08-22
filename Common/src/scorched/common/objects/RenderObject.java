@@ -245,7 +245,7 @@ public class RenderObject implements IRenderObject
         }
 
         if(indexBuffer != null)
-            GLES20.glDrawElements(GLES20.GL_LINE_LOOP, indexLength,
+            GLES20.glDrawElements(GLES20.GL_TRIANGLE_STRIP, indexLength,
                     GLES20.GL_UNSIGNED_INT, indexBuffer);
         else
             GLES20.glDrawElements(GLES20.GL_TRIANGLE_STRIP, vertexLength, GLES20.GL_FLOAT, 0);

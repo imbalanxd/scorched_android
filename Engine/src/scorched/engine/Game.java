@@ -27,14 +27,16 @@ public class Game
     public static long frameTimeElapsed = 0;
     public static long frameTimeStart = 0;
 
-    private DisplaySurface m_mainScreen;
+    protected DisplaySurface m_mainScreen;
 
     public Game(Context context)
     {
         Log.d("SCORCHED", "Game::Constructor");
         m_mainScreen = new DisplaySurface(context);
-        m_mainScreen.setRenderer(new DefaultRenderer());
+        m_mainScreen.initialize();
         m_mainScreen.setRenderMode(GLSurfaceView.RENDERMODE_WHEN_DIRTY);
+
+        gameObjects = new Vector<IGameObject>();
     }
 
     public GLSurfaceView getSurface()
@@ -45,7 +47,7 @@ public class Game
     public void initGame()
     {
         Log.d("SCORCHED", "Game::Initialised");
-        gameObjects = new Vector<IGameObject>();
+
         frameTimeStart = System.currentTimeMillis();
     }
 

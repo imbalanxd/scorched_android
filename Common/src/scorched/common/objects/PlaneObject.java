@@ -2,6 +2,7 @@ package scorched.common.objects;
 
 import android.util.Log;
 import scorched.engine.Geometry.Vector3;
+import scorched.engine.util.PerlinNoise;
 
 /**
  * Created with IntelliJ IDEA.
@@ -31,12 +32,16 @@ public class PlaneObject extends GameObject
 
 
         createGrid();
+        createTexture();
+
+        model.translate(0.0f,-5.0f,-20.0f);
+        //model.rotate(1,0,0,90);
     }
 
     private void createGrid()
     {
         Vector3 [] vertices = new Vector3 [(m_gridX + 1)*(m_gridY + 1)];
-        int [] indices = new int [211];
+        int [] indices = new int [m_gridX*m_gridY*2 + (m_gridX + 1)];
         float [] texture = new float [(m_gridX + 1)*(m_gridY + 1)*3];
 
         createVertex(vertices);
@@ -44,6 +49,20 @@ public class PlaneObject extends GameObject
 
         model.getLazyBone("main").setVertices(vertices);
         model.getLazyBone("main").setIndices(indices);
+    }
+
+    private void createTexture()
+    {
+        int width = 64, height = 64;
+        float z = (float)Math.random() * 100;
+
+        float [] tex = new float[64*64];
+
+        for(int i = 0; i < height; i++)
+        {
+            tex[i] = PerlinNoise.noise(i % width, (float)Math.floor(i / width),z);
+        }
+        Log.d("hell","no");
     }
 
     private void createVertex(Vector3 [] vertices)
@@ -110,5 +129,7 @@ public class PlaneObject extends GameObject
 
     public void update()
     {
+        //model.translate(0.0f,0.0f,-0.001f);
+        model.rotate(0.0f,0.0f,1.0f,1.0f);
     }
 }

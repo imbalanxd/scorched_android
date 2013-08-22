@@ -21,13 +21,13 @@ public class ScorchedGame extends Game
 {
     public ScorchedGame(Context context) {
         super(context);
+        m_mainScreen.setCamera(new CameraObject());
     }
 
     public void initGame()
     {
         super.initGame();
 
-        GameObject go = new PlaneObject(1,1,10,10);
-        GameObject camera = new CameraObject();
+        GameObject go = new PlaneObject(10,10,20,20);
     }
 }

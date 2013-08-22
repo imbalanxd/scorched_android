@@ -33,7 +33,7 @@ public class Effect
                     "attribute vec4 aVertexPosition;" +
                     "void main() {" +
                     // the matrix must be included as a modifier of gl_Position
-                    "  gl_Position = aVertexPosition * uMVPMatrix;" +
+                    "  gl_Position =  uMVPMatrix * aVertexPosition;" +
                     "}";
 
     static protected final String fragmentShaderCode =

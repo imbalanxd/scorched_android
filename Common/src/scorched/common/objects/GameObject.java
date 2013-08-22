@@ -2,6 +2,7 @@ package scorched.common.objects;
 
 import scorched.engine.Game;
 import scorched.engine.Geometry.Vector3;
+import scorched.engine.interfaces.ICameraObject;
 import scorched.engine.interfaces.IGameObject;
 import scorched.engine.shader.Effect;
 
@@ -31,13 +32,13 @@ public class GameObject implements IGameObject
     }
 
     @Override
-    public void draw(float[] _mvpMatrix) {
+    public void draw(ICameraObject _camera) {
         //Log.d("SCORCHED", "GameObject:Draw");
         if(model != null)
         {
             model.getEffect("main").setValue(Effect.COLOR_HANDLE, new float []{ 0.63671875f, 0.76953125f, 0.22265625f, 1.0f });
 
-            model.draw(_mvpMatrix);
+            model.draw(_camera);
         }
     }
 

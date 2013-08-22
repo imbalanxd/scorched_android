@@ -9,7 +9,7 @@ package scorched.engine.interfaces;
  */
 public interface IGameObject
 {
-    public void draw(float[] _mvpMatrix);
+    public void draw(ICameraObject camera);
     public void update();
 
     public void translate(float x, float y, float z);

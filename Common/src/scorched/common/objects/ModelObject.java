@@ -3,6 +3,7 @@ package scorched.common.objects;
 import android.opengl.Matrix;
 import android.util.Log;
 import scorched.engine.Geometry.Vector3;
+import scorched.engine.interfaces.ICameraObject;
 import scorched.engine.shader.Effect;
 
 import java.util.HashMap;
@@ -92,19 +93,20 @@ public class ModelObject
         float [] trans = new float[16];
         Matrix.setIdentityM(rot, 0);
         Matrix.setIdentityM(trans, 0);
-        Matrix.rotateM(rot, 0,0, 1.0f,0.0f,0.0f);
-        Matrix.translateM(trans, 0, 0.8f,0.5f,0.5f);
-        Matrix.multiplyMM(m_transform, 0, rot  , 0,trans , 0);
+        Matrix.rotateM(rot, 0,m_rotation.z, 0.0f,1.0f,0.0f);
+        Matrix.translateM(trans, 0, m_position.x,m_position.y,m_position.z);
+        Matrix.multiplyMM(m_transform, 0, trans   , 0,rot , 0);
 
         m_dirty = false;
     }
 
-    public void draw(float[] _mvpMatrix)
+    public void draw(ICameraObject _camera)
     {
         if(m_dirty)
             createTransform();
         float [] out = new float[16];
-        Matrix.multiplyMM(out, 0, m_transform, 0, _mvpMatrix, 0);
+        Matrix.multiplyMM(out, 0,  _camera.modelViewMatrix() , 0,m_transform, 0);
+        Matrix.multiplyMM(out, 0, _camera.projectionMatrix() , 0, out, 0);
         for (String key : bones.keySet())
         {
             getEffect(key).setValue(Effect.MODELVIEWPROJECTION_HANDLE, out);
