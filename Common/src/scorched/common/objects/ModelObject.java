@@ -1,8 +1,7 @@
 package scorched.common.objects;
 
 import android.opengl.Matrix;
-import android.util.Log;
-import scorched.engine.Geometry.Vector3;
+import scorched.engine.geometry.Vector3;
 import scorched.engine.interfaces.ICameraObject;
 import scorched.engine.shader.Effect;
 

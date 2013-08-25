@@ -1,6 +1,7 @@
 package scorched.engine.shader;
 
 import android.opengl.GLES20;
+import android.util.Log;
 import scorched.engine.renderer.DefaultRenderer;
 
 /**
@@ -21,6 +22,9 @@ public class EffectLoader
         // add the source code to the shader and compile it
         GLES20.glShaderSource(shader, shaderCode);
         GLES20.glCompileShader(shader);
+
+        Log.d("SCORCHED TEST",GLES20.glGetShaderInfoLog(shader));
+
         DefaultRenderer.checkGlError("glCompileShader");
         return shader;
     }

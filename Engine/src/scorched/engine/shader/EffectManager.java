@@ -34,6 +34,8 @@ public class EffectManager
 
     public static int addHandle(String effect, String key, Integer value)
     {
+        if(value == -1)
+            return -1;
         handles.get(effect).put(key, value);
         return 0;
     }

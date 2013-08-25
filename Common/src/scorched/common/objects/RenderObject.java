@@ -2,7 +2,8 @@ package scorched.common.objects;
 
 import android.opengl.GLES20;
 import android.util.Log;
-import scorched.engine.Geometry.Vector3;
+import scorched.engine.geometry.Vector2;
+import scorched.engine.geometry.Vector3;
 import scorched.engine.interfaces.IRenderObject;
 import scorched.engine.renderer.DefaultRenderer;
 import scorched.engine.shader.Effect;
@@ -31,6 +32,7 @@ public class RenderObject implements IRenderObject
 
     protected FloatBuffer texCoordBuffer;
     protected int texCoordSize = 2;
+    protected int texCoordLength;
     protected float [] texCoords;
 
     protected FloatBuffer normalBuffer;
@@ -43,7 +45,7 @@ public class RenderObject implements IRenderObject
 
     public RenderObject()
     {
-        effect = new Effect();
+        //effect = new Effect();
     }
 
     @Override
@@ -102,19 +104,25 @@ public class RenderObject implements IRenderObject
     }
 
     @Override
-    public void setTexCoords(float[] _texCoords) {
+    public void setTexCoords(Vector2[] _texCoords) {
         setTexCoords(_texCoords, 2);
     }
 
     @Override
-    public void setTexCoords(float[] _texCoords, int itemSize) {
+    public void setTexCoords(Vector2[] _texCoords, int itemSize) {
         texCoordSize = itemSize;
+        texCoordLength = _texCoords.length;
 
-        ByteBuffer buffer = ByteBuffer.allocateDirect(_texCoords.length * 4);
+        ByteBuffer buffer = ByteBuffer.allocateDirect(_texCoords.length * itemSize * 4);
         buffer.order(ByteOrder.nativeOrder());
 
         texCoordBuffer = buffer.asFloatBuffer();
-        texCoordBuffer.put(_texCoords);
+        for(int i=0; i < texCoordLength; i++)
+        {
+            Vector2 texCoord = _texCoords[i];
+            texCoordBuffer.put(texCoord.x);
+            texCoordBuffer.put(texCoord.y);
+        }
         texCoordBuffer.position(0);
     }
 
@@ -210,7 +218,12 @@ public class RenderObject implements IRenderObject
 
     @Override
     public Effect getEffect() {
-        return effect;  //To change body of implemented methods use File | Settings | File Templates.
+        return effect;
+    }
+
+    @Override
+    public void setEffect(Effect _effect) {
+        effect = _effect;
     }
 
     @Override

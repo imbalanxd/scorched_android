@@ -3,6 +3,7 @@ package scorched.engine.shader;
 import android.opengl.GLES20;
 import android.util.Log;
 import scorched.engine.renderer.DefaultRenderer;
+import scorched.engine.texture.Texture;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -20,28 +21,25 @@ public class Effect
     public static final String VERTEX_HANDLE = "aVertexPosition";
     public static final String NORMAL_HANDLE = "aVertexNormal";
     public static final String TEXCOORD_HANDLE = "aTexCoord";
+    public static final String TEXTURE01_HANDLE = "uTexture01";
     public static final String PROJECTION_HANDLE = "uPMatrix";
     public static final String MODELVIEW_HANDLE = "uMVMatrix";
     public static final String MODELVIEWPROJECTION_HANDLE = "uMVPMatrix";
     public static final String COLOR_HANDLE = "vColor";
 
-    static protected final String vertexShaderCode =
-            // This matrix member variable provides a hook to manipulate
-            // the coordinates of the objects that use this vertex shader
+    protected String vertexShaderCode =
             "uniform mat4 uMVPMatrix;" +
+            "attribute vec3 aVertexPosition;" +
+            "void main() {" +
+            "  gl_Position =  uMVPMatrix * vec4(aVertexPosition.xyz, 1.0);" +
+            "}";
 
-                    "attribute vec4 aVertexPosition;" +
-                    "void main() {" +
-                    // the matrix must be included as a modifier of gl_Position
-                    "  gl_Position =  uMVPMatrix * aVertexPosition;" +
-                    "}";
-
-    static protected final String fragmentShaderCode =
+    protected String fragmentShaderCode =
             "precision mediump float;" +
-                    "uniform vec4 vColor;" +
-                    "void main() {" +
-                    "  gl_FragColor = vColor;" +
-                    "}";
+            "uniform vec4 vColor;" +
+            "void main() {" +
+            "  gl_FragColor = vColor;" +
+            "}";
 
     //protected static Map<String, Integer> handles;
     //protected static boolean initialized;
@@ -70,10 +68,13 @@ public class Effect
 
     protected int setHandle(String key, Integer value)
     {
-        Log.d("SCORCHED INIT", "Shader uniform "+key+" hooked to "+value);
         if(EffectManager.hasEffect(effectName))
         {
-            return EffectManager.addHandle(effectName, key, value);
+            if(EffectManager.addHandle(effectName, key, value) == 0)
+            {
+                Log.d("SCORCHED INIT", "Shader value "+key+" hooked to "+value);
+                return 0;
+            }
         }
         return -1;
     }
@@ -128,19 +129,6 @@ public class Effect
     {
         if(!EffectManager.hasEffectValue(effectName, Effect.PROGRAM_HANDLE))
         {
-            // prepare shaders and OpenGL program
-//            int vertexShader = loadShader(GLES20.GL_VERTEX_SHADER,
-//                    vertexShaderCode);
-//            int fragmentShader = loadShader(GLES20.GL_FRAGMENT_SHADER,
-//                    fragmentShaderCode);
-//
-//            program = GLES20.glCreateProgram();             // create empty OpenGL Program
-//            DefaultRenderer.checkGlError("glCreateProgram");
-//            GLES20.glAttachShader(program, vertexShader);   // add the vertex shader to program
-//            GLES20.glAttachShader(program, fragmentShader); // add the fragment shader to program
-//            GLES20.glLinkProgram(program);                  // create OpenGL program executables
-//
-//            initialized = true;
             EffectManager.addHandle(effectName, Effect.PROGRAM_HANDLE, EffectLoader.loadEffect(vertexShaderCode, fragmentShaderCode));
 
             Log.d("SCORCHED INIT", "Shader Program created: "+ EffectManager.getHandle(effectName, Effect.PROGRAM_HANDLE));
@@ -162,6 +150,13 @@ public class Effect
         DefaultRenderer.checkGlError("glUniformMatrix4fv");
     }
 
+    protected void setTexture01()
+    {
+        GLES20.glActiveTexture(GLES20.GL_TEXTURE0);
+        GLES20.glBindTexture(GLES20.GL_TEXTURE_2D,((Texture)(getValue(Effect.TEXTURE01_HANDLE))).getTexture());
+        GLES20.glUniform1i(getUniformLocation(Effect.TEXTURE01_HANDLE), 0);
+    }
+
     public int position()
     {
         return getAttributeLocation("vPosition");
@@ -171,12 +166,22 @@ public class Effect
     {
         if(true)
         {
-            GLES20.glUseProgram(getProgram());
-            setColor();
-            setMVP();
+            loadProgram();
+            load();
             return 0;
         }
         else
             return -1;
+    }
+
+    protected void loadProgram()
+    {
+        GLES20.glUseProgram(getProgram());
+    }
+
+    protected void load()
+    {
+        setColor();
+        setMVP();
     }
 }

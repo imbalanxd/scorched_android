@@ -1,7 +1,12 @@
 package scorched.common.objects;
 
+import android.graphics.Color;
 import android.util.Log;
-import scorched.engine.Geometry.Vector3;
+import scorched.common.shaders.TextureEffect;
+import scorched.engine.geometry.Vector2;
+import scorched.engine.geometry.Vector3;
+import scorched.engine.shader.Effect;
+import scorched.engine.texture.Texture;
 import scorched.engine.util.PerlinNoise;
 
 /**
@@ -29,6 +34,7 @@ public class PlaneObject extends GameObject
         m_gridY = _y;
 
         model = new ModelObject();
+        model.getLazyBone("main").setEffect(new TextureEffect());
 
 
         createGrid();
@@ -42,12 +48,13 @@ public class PlaneObject extends GameObject
     {
         Vector3 [] vertices = new Vector3 [(m_gridX + 1)*(m_gridY + 1)];
         int [] indices = new int [m_gridX*m_gridY*2 + (m_gridX + 1)];
-        float [] texture = new float [(m_gridX + 1)*(m_gridY + 1)*3];
+        Vector2 [] texture = new Vector2 [(m_gridX + 1)*(m_gridY + 1)];
 
-        createVertex(vertices);
+        createVertexAndTex(vertices, texture);
         createIndex(indices);
 
         model.getLazyBone("main").setVertices(vertices);
+        model.getLazyBone("main").setTexCoords(texture);
         model.getLazyBone("main").setIndices(indices);
     }
 
@@ -56,16 +63,21 @@ public class PlaneObject extends GameObject
         int width = 64, height = 64;
         float z = (float)Math.random() * 100;
 
-        float [] tex = new float[64*64];
+         int [] tex = new int[64*64];
 
-        for(int i = 0; i < height; i++)
+        for(int i = 0; i < height*width; i++)
         {
-            tex[i] = PerlinNoise.noise(i % width, (float)Math.floor(i / width),z);
+            int val = (int)(PerlinNoise.noise(i % width, (float)Math.floor(i / width),z)*255);
+            tex[i] = Color.argb(val,val,val,255);//(int)(PerlinNoise.noise(i % width, (float)Math.floor(i / width),z)*255);
         }
-        Log.d("hell","no");
+        //Log.d("SCORCHED TEST", tex[10]+" "+tex[30]+" "+tex[50]+" "+tex[100]+" ");
+
+        Texture t = new Texture(tex, 64, 64, Texture.TEXTURE2D_ARGB, true);
+
+        model.getEffect("main").setValue(Effect.TEXTURE01_HANDLE, t);
     }
 
-    private void createVertex(Vector3 [] vertices)
+    private void createVertexAndTex(Vector3 [] _vertices, Vector2[] _texCoords)
     {
         int x1 = m_gridX + 1, y1 = m_gridY + 1;
         float widthHalf = m_width/2.0f, heightHalf = m_height/2.0f,
@@ -76,17 +88,14 @@ public class PlaneObject extends GameObject
             for(int x = 0; x < x1; x++)
             {
 
-                vertices[y*x1 + x] = new Vector3(
+                _vertices[y*x1 + x] = new Vector3(
                         widthSegment * x - widthHalf, 			//GRIDX
                         0.0f,                                      //HEIGHT
                         heightSegment * y - heightHalf);        //GRIDY
+
+                _texCoords[y*x1 + x] = new Vector2((float)x/(float)(m_gridX), (float)y/(float)(m_gridY));
             }
         }
-    }
-
-    private void createVertexAndTexture(float [] vertices,float [] texture)
-    {
-
     }
 
     private void createIndex(int [] indices)

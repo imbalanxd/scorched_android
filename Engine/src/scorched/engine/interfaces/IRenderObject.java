@@ -1,6 +1,7 @@
 package scorched.engine.interfaces;
 
-import scorched.engine.Geometry.Vector3;
+import scorched.engine.geometry.Vector2;
+import scorched.engine.geometry.Vector3;
 import scorched.engine.shader.Effect;
 
 import java.nio.FloatBuffer;
@@ -25,8 +26,8 @@ public interface IRenderObject
 
     public float[] getTexCoords();
     public FloatBuffer getTexCoordBuffer();
-    public void setTexCoords(float[] _vertices);
-    public void setTexCoords(float[] _vertices, int itemSize);
+    public void setTexCoords(Vector2[] _vertices);
+    public void setTexCoords(Vector2[] _vertices, int itemSize);
     public void addTexCoords(float [] _vertices);
 
     public float[] getIndices();
@@ -45,6 +46,7 @@ public interface IRenderObject
     public void addNormals(float [] _vertices);
 
     public Effect getEffect();
+    public void setEffect(Effect _effect);
 
     public void draw(float[] _mvpMatrix);
 }

@@ -1,7 +1,6 @@
 package scorched.common.objects;
 
 import scorched.engine.Game;
-import scorched.engine.Geometry.Vector3;
 import scorched.engine.interfaces.ICameraObject;
 import scorched.engine.interfaces.IGameObject;
 import scorched.engine.shader.Effect;

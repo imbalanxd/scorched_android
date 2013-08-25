@@ -3,34 +3,30 @@ package scorched.engine.geometry;
 /**
  * Created with IntelliJ IDEA.
  * User: Robin
- * Date: 8/18/13
- * Time: 4:11 PM
+ * Date: 8/24/13
+ * Time: 3:41 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Vector3
+public class Vector2
 {
     public float x = 0;
     public float y = 0;
-    public float z = 0;
 
-    public Vector3(float _x,float  _y,float  _z)
+    public Vector2(float _x,float  _y)
     {
         x = _x;
         y = _y;
-        z = _z;
     }
 
-    public Vector3()
+    public Vector2()
     {
         x = 0;
         y = 0;
-        z = 0;
     }
 
-    public void add(float _x, float _y,float _z)
+    public void add(float _x, float _y)
     {
         x+=_x;
         y+=_y;
-        z+=_z;
     }
 }
