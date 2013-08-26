@@ -71,4 +71,18 @@ public class PerlinNoise
                         lerp(u, grad(p[AB+1], _x, yMinus1, zMinus1),
                                 grad(p[BB+1], xMinus1, yMinus1, zMinus1))));
     }
+
+    public static float getValue(float _x, float _y, float _z)
+    {
+        int quality = 1;
+        float z = (float)Math.random() * 100, ret = 0.0f;
+
+        for ( int j = 0; j < 4; j ++ )
+        {
+                ret += noise( _x / quality, _y / quality, _z ) * quality * 1.75;
+
+                quality *= 5;
+        }
+        return Math.min(1.0f,Math.max((ret+100.0f)/200.0f,0.0f));
+    }
 }

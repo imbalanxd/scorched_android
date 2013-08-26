@@ -20,6 +20,7 @@ public class PlaneObject extends GameObject
 {
     private float m_width, m_height;
     private int m_gridX, m_gridY;
+    private float randomZ;
 
     //_width: Total width of the plane
     //_height: Total height of the plane
@@ -36,7 +37,7 @@ public class PlaneObject extends GameObject
         model = new ModelObject();
         model.getLazyBone("main").setEffect(new TextureEffect());
 
-
+        randomZ = (float)Math.random() * 100;
         createGrid();
         createTexture();
 
@@ -60,19 +61,17 @@ public class PlaneObject extends GameObject
 
     private void createTexture()
     {
-        int width = 64, height = 64;
-        float z = (float)Math.random() * 100;
+        int width = 128, height = 128;
 
-         int [] tex = new int[64*64];
+        int [] tex = new int[width*height];
 
         for(int i = 0; i < height*width; i++)
         {
-            int val = (int)(PerlinNoise.noise(i % width, (float)Math.floor(i / width),z)*255);
-            tex[i] = Color.argb(val,val,val,255);//(int)(PerlinNoise.noise(i % width, (float)Math.floor(i / width),z)*255);
+            int val = (int)(PerlinNoise.getValue(i % width, (float)Math.floor(i / width),randomZ)*255);
+            tex[i] = Color.argb(255,val,val,val);
         }
-        //Log.d("SCORCHED TEST", tex[10]+" "+tex[30]+" "+tex[50]+" "+tex[100]+" ");
 
-        Texture t = new Texture(tex, 64, 64, Texture.TEXTURE2D_ARGB, true);
+        Texture t = new Texture(tex, width, height, Texture.TEXTURE2D_ARGB, true);
 
         model.getEffect("main").setValue(Effect.TEXTURE01_HANDLE, t);
     }
@@ -90,7 +89,7 @@ public class PlaneObject extends GameObject
 
                 _vertices[y*x1 + x] = new Vector3(
                         widthSegment * x - widthHalf, 			//GRIDX
-                        0.0f,                                      //HEIGHT
+                        (PerlinNoise.getValue(x, y ,randomZ)*10.0f),                                      //HEIGHT
                         heightSegment * y - heightHalf);        //GRIDY
 
                 _texCoords[y*x1 + x] = new Vector2((float)x/(float)(m_gridX), (float)y/(float)(m_gridY));

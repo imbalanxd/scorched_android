@@ -48,7 +48,7 @@ public class TextureEffect extends Effect
                         "varying vec2 vTexture01;" +
                         "void main(void) " +
                         "{" +
-                        "gl_FragColor = vec4(texture2D(uTexture01, vTexture01).xyz, 1.0);" +
+                        "gl_FragColor = texture2D(uTexture01, vTexture01);" +
                         "}";
 
         vertexShaderCode =
