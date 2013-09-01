@@ -2,6 +2,7 @@ package scorched.common.objects;
 
 import android.graphics.Color;
 import android.util.Log;
+import scorched.common.shaders.NormalMappedEffect;
 import scorched.common.shaders.TextureEffect;
 import scorched.engine.geometry.Vector2;
 import scorched.engine.geometry.Vector3;
@@ -35,11 +36,11 @@ public class PlaneObject extends GameObject
         m_gridY = _y;
 
         model = new ModelObject();
-        model.getLazyBone("main").setEffect(new TextureEffect());
+        model.getLazyBone("main").setEffect(new NormalMappedEffect());
 
         randomZ = (float)Math.random() * 100;
         createGrid();
-        createTexture();
+        createNormal();
 
         model.translate(0.0f,-5.0f,-20.0f);
         //model.rotate(1,0,0,90);
@@ -61,7 +62,7 @@ public class PlaneObject extends GameObject
 
     private void createTexture()
     {
-        int width = 128, height = 128;
+        int width = m_gridX, height = m_gridY;
 
         int [] tex = new int[width*height];
 
@@ -86,7 +87,7 @@ public class PlaneObject extends GameObject
         {
             for(int x = 0; x < x1; x++)
             {
-
+                float derp = PerlinNoise.getValue(x, y ,randomZ);
                 _vertices[y*x1 + x] = new Vector3(
                         widthSegment * x - widthHalf, 			//GRIDX
                         (PerlinNoise.getValue(x, y ,randomZ)*10.0f),                                      //HEIGHT
@@ -95,6 +96,36 @@ public class PlaneObject extends GameObject
                 _texCoords[y*x1 + x] = new Vector2((float)x/(float)(m_gridX), (float)y/(float)(m_gridY));
             }
         }
+    }
+
+    private void createNormal()
+    {
+        int width = m_gridX, height = m_gridY;
+
+        int [] tex = new int[width*height];
+
+        for(int i = 0; i < height*width; i++)
+        {
+            int x = i % width, y = (int)Math.floor(i / width);
+
+            float val1 = (PerlinNoise.getValue(x+1, y, randomZ))*100.0f;
+            float val2 = (PerlinNoise.getValue(x, y, randomZ))*100.0f;
+            float val3 = (PerlinNoise.getValue(x, y+1,randomZ))*100.0f;
+
+            Vector3 one = new Vector3(1.0f, val1 - val2, 0.0f);
+            Vector3 two = new Vector3(0.0f, val3 - val2, 1.0f);
+            Vector3 normal = two.cross(one);
+            normal.normalise();
+
+            tex[i] = Color.argb(255,(int)(normal.x*255),(int)(normal.y*255),(int)(normal.z*255));
+        }
+
+        Texture t = new Texture(tex, width, height, Texture.TEXTURE2D_ARGB, true);
+
+        model.getEffect("main").setValue(Effect.COLOR_HANDLE, new float []{ 0.63671875f, 0.76953125f, 0.22265625f, 1.0f });
+        model.getEffect("main").setValue(Effect.TEXTURE02_HANDLE, t);
+        model.getEffect("main").setValue(Effect.DIRLIGHT01_HANDLE, new float [] {-1.0f, 0.0f, 0.0f});
+        model.getEffect("main").setValue(Effect.DIRLIGHTCOLOR01_HANDLE, new float [] {1.0f, 1.0f,0.0f,1.0f});
     }
 
     private void createIndex(int [] indices)

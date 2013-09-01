@@ -33,4 +33,22 @@ public class Vector3
         y+=_y;
         z+=_z;
     }
+
+    public Vector3 cross(Vector3 b)
+    {
+        return new Vector3(this.y*b.z - this.z*b.y, this.z*b.x - this.x*b.z, this.x*b.y - this.y*b.x);
+    }
+
+    public void normalise()
+    {
+        float magnitude = magnitude();
+        x/=magnitude;
+        y/=magnitude;
+        z/=magnitude;
+    }
+
+    public float magnitude()
+    {
+        return (float)Math.sqrt(Math.pow(this.x, 2) + Math.pow(this.y, 2) + Math.pow(this.z, 2));
+    }
 }

@@ -22,10 +22,13 @@ public class Effect
     public static final String NORMAL_HANDLE = "aVertexNormal";
     public static final String TEXCOORD_HANDLE = "aTexCoord";
     public static final String TEXTURE01_HANDLE = "uTexture01";
+    public static final String TEXTURE02_HANDLE = "uTexture02";
     public static final String PROJECTION_HANDLE = "uPMatrix";
     public static final String MODELVIEW_HANDLE = "uMVMatrix";
     public static final String MODELVIEWPROJECTION_HANDLE = "uMVPMatrix";
     public static final String COLOR_HANDLE = "vColor";
+    public static final String DIRLIGHT01_HANDLE = "uDirLight01";
+    public static final String DIRLIGHTCOLOR01_HANDLE = "uDirLightColor01";
 
     protected String vertexShaderCode =
             "uniform mat4 uMVPMatrix;" +
@@ -144,6 +147,18 @@ public class Effect
         DefaultRenderer.checkGlError("glUniform4fv");
     }
 
+    protected void setDirLightColor01()
+    {
+        GLES20.glUniform4fv(getUniformLocation(Effect.DIRLIGHTCOLOR01_HANDLE), 1, (float[])getValue(Effect.DIRLIGHTCOLOR01_HANDLE), 0);
+        DefaultRenderer.checkGlError("glUniform4fv");
+    }
+
+    protected void setDirLight01()
+    {
+        GLES20.glUniform3fv(getUniformLocation(Effect.DIRLIGHT01_HANDLE), 1, (float[])getValue(Effect.DIRLIGHT01_HANDLE), 0);
+        DefaultRenderer.checkGlError("glUniform4fv");
+    }
+
     protected void setMVP()
     {
         GLES20.glUniformMatrix4fv(getUniformLocation(Effect.MODELVIEWPROJECTION_HANDLE), 1, false, (float[]) getValue(Effect.MODELVIEWPROJECTION_HANDLE), 0);
@@ -155,6 +170,13 @@ public class Effect
         GLES20.glActiveTexture(GLES20.GL_TEXTURE0);
         GLES20.glBindTexture(GLES20.GL_TEXTURE_2D,((Texture)(getValue(Effect.TEXTURE01_HANDLE))).getTexture());
         GLES20.glUniform1i(getUniformLocation(Effect.TEXTURE01_HANDLE), 0);
+    }
+
+    protected void setTexture02()
+    {
+        GLES20.glActiveTexture(GLES20.GL_TEXTURE1);
+        GLES20.glBindTexture(GLES20.GL_TEXTURE_2D,((Texture)(getValue(Effect.TEXTURE02_HANDLE))).getTexture());
+        GLES20.glUniform1i(getUniformLocation(Effect.TEXTURE02_HANDLE), 0);
     }
 
     public int position()

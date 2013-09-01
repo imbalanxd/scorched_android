@@ -28,6 +28,6 @@ public class ScorchedGame extends Game
     {
         super.initGame();
 
-        GameObject go = new PlaneObject(20,20,20,20);
+        GameObject go = new PlaneObject(20,20,32,32);
     }
 }

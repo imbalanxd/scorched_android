@@ -43,6 +43,12 @@ public class DefaultRenderer implements Renderer
     {
         // Adjust the viewport based on geometry changes,
         // such as screen rotation
+        GLES20.glEnable( GLES20.GL_CULL_FACE );
+        GLES20.glCullFace(GLES20.GL_BACK);
+        GLES20.glEnable(GLES20.GL_DEPTH_TEST);
+        //GLES20.glClearDepthf(1.0f);
+        //GLES20.glDepthFunc( GLES20.GL_LEQUAL );
+       // GLES20.glDepthMask( true );
         GLES20.glViewport(0, 0, width, height);
 
         float ratio = (float) width / height;
@@ -76,7 +82,7 @@ public class DefaultRenderer implements Renderer
     @Override
     public void onDrawFrame(GL10 gl)
     {
-        GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
+        GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT | GLES20.GL_DEPTH_BUFFER_BIT);
 
 
         for(IGameObject object : Game.gameObjects)
