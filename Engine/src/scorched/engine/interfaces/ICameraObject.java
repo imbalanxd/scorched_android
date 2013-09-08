@@ -14,4 +14,7 @@ public interface ICameraObject
 
     public void setProjection(float [] projection);
     public void setModelView(float [] modelView);
+
+    public float [] getProjection();
+    public float [] getModelView();
 }

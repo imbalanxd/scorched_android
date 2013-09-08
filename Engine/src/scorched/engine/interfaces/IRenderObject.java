@@ -48,5 +48,8 @@ public interface IRenderObject
     public Effect getEffect();
     public void setEffect(Effect _effect);
 
-    public void draw(float[] _mvpMatrix);
+    public void rotate(float x, float y, float z, float theta);
+    public void translate(float x, float y, float z);
+
+    public void draw(float[] _projection, float[] _modelView);
 }

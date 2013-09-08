@@ -1,6 +1,6 @@
 package scorched.common.ui;
 
-import scorched.engine.ui.InterfaceControl;
+import scorched.engine.ui.Sprite;
 
 /**
  * Created with IntelliJ IDEA.
@@ -9,7 +9,7 @@ import scorched.engine.ui.InterfaceControl;
  * Time: 10:43 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Image extends InterfaceControl
+public class Image extends Sprite
 {
 
 }

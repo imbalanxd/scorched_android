@@ -1,6 +1,7 @@
 package scorched.common.objects;
 
 import android.opengl.GLES20;
+import android.opengl.Matrix;
 import android.util.Log;
 import scorched.engine.geometry.Vector2;
 import scorched.engine.geometry.Vector3;
@@ -42,6 +43,11 @@ public class RenderObject implements IRenderObject
 
     //Shader assigned to this object
     protected Effect effect;
+
+    Vector3 m_position = new Vector3();
+    Vector3 m_rotation = new Vector3();
+    private boolean m_dirty = true;
+    private float[] m_transform = new float[16];
 
     public RenderObject()
     {
@@ -226,11 +232,52 @@ public class RenderObject implements IRenderObject
         effect = _effect;
     }
 
+    public void rotate(float x, float y, float z, float theta)
+    {
+        m_rotation.add(x * theta, y * theta, z * theta);
+        changed();
+    }
+
+    public void translate(float x, float y, float z)
+    {
+        m_position.add(x, y, z);
+        changed();
+    }
+
+    private void changed()
+    {
+        m_dirty = true;
+    }
+
+    protected void createTransform()
+    {
+        //TODO fix this up for general purpose
+        Matrix.setIdentityM(m_transform, 0);
+
+        float [] rot = new float[16];
+        float [] trans = new float[16];
+        Matrix.setIdentityM(rot, 0);
+        Matrix.setIdentityM(trans, 0);
+        Matrix.rotateM(rot, 0,m_rotation.z, 0.0f,1.0f,0.0f);
+        Matrix.translateM(trans, 0, m_position.x,m_position.y,m_position.z);
+        Matrix.multiplyMM(m_transform, 0, trans   , 0,rot , 0);
+
+        m_dirty = false;
+    }
+
     @Override
-    public void draw(float[] _mvpMatrix)
+    public void draw(float[] _projection, float[] _modelView)
     {
         if(effect == null)
             effect = new Effect();
+
+        if(m_dirty)
+            createTransform();
+        float [] out = new float[16];
+        Matrix.multiplyMM(out, 0,  _modelView, 0, m_transform, 0);
+        Matrix.multiplyMM(out, 0, _projection, 0, out, 0);
+        effect.setValue(Effect.MODELVIEWPROJECTION_HANDLE, out);
+
         effect.activate();
 
         if(vertexBuffer != null)

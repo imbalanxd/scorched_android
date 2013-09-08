@@ -20,16 +20,12 @@ import javax.microedition.khronos.opengles.GL10;
  */
 public class DefaultRenderer implements Renderer
 {
-    private final float[] mvpMatrix = new float[16];
-    private final float[] projectionMatrix = new float[16];
-    private final float[] mVMatrix = new float[16];
-    private final float[] mRotationMatrix = new float[16];
-
-    private ICameraObject camera;
+    private ICameraObject m_camera;
+    private ICameraObject m_hudCamera;
 
     public void setCamera(ICameraObject _camera)
     {
-        camera = _camera;
+        m_camera = _camera;
     }
 
     @Override
@@ -55,20 +51,11 @@ public class DefaultRenderer implements Renderer
 
         // this projection matrix is applied to object coordinates
         // in the onDrawFrame() method
-        //Matrix.frustumM(projectionMatrix, 0, -ratio, ratio, -1, 1, 3, 7);
-        //Matrix.perspectiveM(projectionMatrix, 0, 45, ratio, 0.1f, 100.0f);
-        projectionMatrix[0] = 1.408291220664978f;
-        projectionMatrix[5] = 2.4142136573791504f;
-        projectionMatrix[10] = -1.0002000331878662f;
-        projectionMatrix[11] = -1.0f;
-        projectionMatrix[14] = -0.20002000033855438f;
+        Matrix.frustumM(m_camera.getProjection(), 0, -ratio, ratio, -1, 1, 1, 1000);
+        Matrix.setIdentityM(m_camera.getModelView(), 0);
 
-        camera.setProjection(projectionMatrix);
-
-        Matrix.setLookAtM(mVMatrix, 0, 0, 0, -3, 0f, 0f, 0f, 0f, 1.0f, 0.0f);
-        Matrix.setIdentityM(mVMatrix, 0);
-
-        camera.setModelView(mVMatrix);
+        Matrix.orthoM(m_hudCamera.getProjection(),0,0,width,0,height,0,10);
+        Matrix.setIdentityM(m_hudCamera.getModelView(), 0);
     }
 
     public void onUpdateFrame()
@@ -87,8 +74,10 @@ public class DefaultRenderer implements Renderer
 
         for(IGameObject object : Game.gameObjects)
         {
-            object.draw(camera);
+            object.draw(m_camera);
         }
+
+        Game.hud.draw(m_hudCamera);
     }
 
     public static void checkGlError(String glOperation) {
@@ -97,5 +86,9 @@ public class DefaultRenderer implements Renderer
             Log.e("SCORCHED", glOperation + ": glError " + error);
             throw new RuntimeException(glOperation + ": glError " + error);
         }
+    }
+
+    public void setHUDCamera(ICameraObject hudCamera) {
+        m_hudCamera = hudCamera;
     }
 }

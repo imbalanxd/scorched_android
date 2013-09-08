@@ -33,4 +33,14 @@ public class CameraObject implements ICameraObject
     public void setModelView(float[] modelView) {
         m_modelView = modelView;
     }
+
+    @Override
+    public float[] getProjection() {
+        return m_projection;
+    }
+
+    @Override
+    public float[] getModelView() {
+        return m_modelView;
+    }
 }

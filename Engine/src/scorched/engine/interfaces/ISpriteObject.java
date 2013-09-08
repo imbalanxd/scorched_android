@@ -17,6 +17,8 @@ public interface ISpriteObject
     public Rectangle getBounds();
     public Boolean hitTest();
 
-    public void draw();
+    public void setParent(ISpriteObject _parent);
+
+    public void draw(ICameraObject _camera);
     public void update();
 }

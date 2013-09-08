@@ -2,10 +2,12 @@ package scorched.engine;
 
 import android.content.Context;
 import android.opengl.GLSurfaceView;
+import android.view.Display;
 import android.util.Log;
+import android.view.WindowManager;
 import scorched.engine.interfaces.IGameObject;
-import scorched.engine.renderer.DefaultRenderer;
 import scorched.engine.surface.DisplaySurface;
+import scorched.engine.ui.HUD;
 
 import java.util.TimerTask;
 import java.util.Timer;
@@ -23,6 +25,8 @@ public class Game
     private int MAX_FPS = 30;
 
     public static Vector<IGameObject> gameObjects;
+    public static HUD hud;
+    public static Display display;
 
     public static long frameTimeElapsed = 0;
     public static long frameTimeStart = 0;
@@ -36,7 +40,10 @@ public class Game
         m_mainScreen.initialize();
         m_mainScreen.setRenderMode(GLSurfaceView.RENDERMODE_WHEN_DIRTY);
 
+        display = ((WindowManager)(context.getSystemService(Context.WINDOW_SERVICE))).getDefaultDisplay();
+
         gameObjects = new Vector<IGameObject>();
+        hud = new HUD();
     }
 
     public GLSurfaceView getSurface()
@@ -47,6 +54,9 @@ public class Game
     public void initGame()
     {
         Log.d("SCORCHED", "Game::Initialised");
+
+
+        hud.createScreen("main");
 
         frameTimeStart = System.currentTimeMillis();
     }

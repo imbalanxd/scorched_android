@@ -38,4 +38,8 @@ public class DisplaySurface extends GLSurfaceView {
     {
         renderer.setCamera(_camera);
     }
+
+    public void setHUDCamera(ICameraObject cameraObject) {
+        renderer.setHUDCamera(cameraObject);
+    }
 }

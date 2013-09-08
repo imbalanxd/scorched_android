@@ -86,6 +86,7 @@ public class ModelObject
 
     private void createTransform()
     {
+        //TODO fix this up for general purpose
         Matrix.setIdentityM(m_transform, 0);
 
         float [] rot = new float[16];
@@ -105,11 +106,10 @@ public class ModelObject
             createTransform();
         float [] out = new float[16];
         Matrix.multiplyMM(out, 0,  _camera.modelViewMatrix() , 0,m_transform, 0);
-        Matrix.multiplyMM(out, 0, _camera.projectionMatrix() , 0, out, 0);
         for (String key : bones.keySet())
         {
-            getEffect(key).setValue(Effect.MODELVIEWPROJECTION_HANDLE, out);
-            getBone(key).draw(out);
+            //TODO: get rotations working properly retard
+            getBone(key).draw(_camera.projectionMatrix(), out);
         }
     }
 }
