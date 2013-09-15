@@ -1,4 +1,4 @@
-package scorched.common.objects;
+package scorched.engine.renderer;
 
 import android.opengl.GLES20;
 import android.opengl.Matrix;
@@ -244,6 +244,18 @@ public class RenderObject implements IRenderObject
         changed();
     }
 
+    @Override
+    public void setRotation(Vector3 _rotation) {
+        m_rotation = _rotation;
+        changed();
+    }
+
+    @Override
+    public void setTranslation(Vector3 _translation) {
+        m_position = _translation;
+        changed();
+    }
+
     private void changed()
     {
         m_dirty = true;
@@ -258,7 +270,7 @@ public class RenderObject implements IRenderObject
         float [] trans = new float[16];
         Matrix.setIdentityM(rot, 0);
         Matrix.setIdentityM(trans, 0);
-        Matrix.rotateM(rot, 0,m_rotation.z, 0.0f,1.0f,0.0f);
+        Matrix.rotateM(rot, 0,m_rotation.z, 0.0f,0.0f,1.0f);
         Matrix.translateM(trans, 0, m_position.x,m_position.y,m_position.z);
         Matrix.multiplyMM(m_transform, 0, trans   , 0,rot , 0);
 
@@ -311,5 +323,7 @@ public class RenderObject implements IRenderObject
             GLES20.glDrawElements(GLES20.GL_TRIANGLE_STRIP, vertexLength, GLES20.GL_FLOAT, 0);
         DefaultRenderer.checkGlError("glDrawElements");
         Log.d("SCORCHED RUN", "Draw");
+
+        effect.unload();
     }
 }

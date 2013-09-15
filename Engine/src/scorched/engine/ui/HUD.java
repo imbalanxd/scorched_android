@@ -55,6 +55,14 @@ public class HUD
         return null;
     }
 
+    public void update()
+    {
+        for (ISpriteObject screen : m_screens.values())
+        {
+            screen.update();
+        }
+    }
+
     public void draw(ICameraObject _camera)
     {
         for (ISpriteObject screen : m_screens.values())

@@ -40,7 +40,7 @@ public class DefaultRenderer implements Renderer
         // Adjust the viewport based on geometry changes,
         // such as screen rotation
         GLES20.glEnable( GLES20.GL_CULL_FACE );
-        GLES20.glCullFace(GLES20.GL_BACK);
+        //GLES20.glCullFace(GLES20.GL_BACK);
         GLES20.glEnable(GLES20.GL_DEPTH_TEST);
         //GLES20.glClearDepthf(1.0f);
         //GLES20.glDepthFunc( GLES20.GL_LEQUAL );

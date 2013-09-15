@@ -3,6 +3,7 @@ package scorched.common.objects;
 import android.opengl.Matrix;
 import scorched.engine.geometry.Vector3;
 import scorched.engine.interfaces.ICameraObject;
+import scorched.engine.renderer.RenderObject;
 import scorched.engine.shader.Effect;
 
 import java.util.HashMap;

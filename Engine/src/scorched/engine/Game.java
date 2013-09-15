@@ -5,6 +5,7 @@ import android.opengl.GLSurfaceView;
 import android.view.Display;
 import android.util.Log;
 import android.view.WindowManager;
+import scorched.engine.assets.Loader;
 import scorched.engine.interfaces.IGameObject;
 import scorched.engine.surface.DisplaySurface;
 import scorched.engine.ui.HUD;
@@ -22,7 +23,7 @@ import java.util.Vector;
  */
 public class Game
 {
-    private int MAX_FPS = 30;
+    private int MAX_FPS = 40;
 
     public static Vector<IGameObject> gameObjects;
     public static HUD hud;
@@ -36,6 +37,8 @@ public class Game
     public Game(Context context)
     {
         Log.d("SCORCHED", "Game::Constructor");
+        setup(context);
+
         m_mainScreen = new DisplaySurface(context);
         m_mainScreen.initialize();
         m_mainScreen.setRenderMode(GLSurfaceView.RENDERMODE_WHEN_DIRTY);
@@ -44,6 +47,11 @@ public class Game
 
         gameObjects = new Vector<IGameObject>();
         hud = new HUD();
+    }
+
+    protected void setup(Context _context)
+    {
+        Loader.setContext(_context);
     }
 
     public GLSurfaceView getSurface()
@@ -96,20 +104,11 @@ public class Game
         {
             object.update();
         }
+        Game.hud.update();
     }
 
     public static void addGameObject(IGameObject object)
     {
         gameObjects.add(object);
-    }
-}
-
-class GameLoop extends Thread
-{
-
-    @Override
-    public void run()
-    {
-        //To change body of implemented methods use File | Settings | File Templates.
     }
 }

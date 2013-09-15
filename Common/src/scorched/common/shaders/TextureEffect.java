@@ -18,7 +18,6 @@ public class TextureEffect extends Effect
         super();
         fragmentShaderCode =
                 "precision mediump float;" +
-                        "uniform vec4 vColor;" +
                         "uniform sampler2D uTexture01;" +
                         "varying vec2 vTexture01;" +
                         "void main(void) " +
@@ -40,9 +39,13 @@ public class TextureEffect extends Effect
 
     protected void load()
     {
-        setColor();
         setMVP();
         setTexture01();
+    }
+
+    public void unload()
+    {
+        unloadTexture01();
     }
 
 }

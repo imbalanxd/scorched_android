@@ -20,8 +20,6 @@ public class NormalMappedEffect extends Effect
                         "uniform vec3 uDirLight01;" +
                         "uniform vec4 uDirLightColor01;" +
                         "uniform vec4 vColor;" +
-                        "uniform sampler2D uTexture01;" +
-                        "varying vec2 vTexture01;" +
                         "uniform sampler2D uTexture02;" +
                         "varying vec2 vTexture02;" +
                         "void main(void) " +
@@ -50,5 +48,10 @@ public class NormalMappedEffect extends Effect
         setTexture02();
         setDirLight01();
         setDirLightColor01();
+    }
+
+    public void unload()
+    {
+        unloadTexture02();
     }
 }

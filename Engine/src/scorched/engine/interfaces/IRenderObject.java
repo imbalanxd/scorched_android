@@ -50,6 +50,8 @@ public interface IRenderObject
 
     public void rotate(float x, float y, float z, float theta);
     public void translate(float x, float y, float z);
+    public void setRotation(Vector3 _rotation);
+    public void setTranslation(Vector3 _translation);
 
     public void draw(float[] _projection, float[] _modelView);
 }

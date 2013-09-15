@@ -124,7 +124,7 @@ public class PlaneObject extends GameObject
 
         model.getEffect("main").setValue(Effect.COLOR_HANDLE, new float []{ 0.63671875f, 0.76953125f, 0.22265625f, 1.0f });
         model.getEffect("main").setValue(Effect.TEXTURE02_HANDLE, t);
-        model.getEffect("main").setValue(Effect.DIRLIGHT01_HANDLE, new float [] {-1.0f, 0.0f, 0.0f});
+        model.getEffect("main").setValue(Effect.DIRLIGHT01_HANDLE, new float [] {-1.0f, -0.0f, -1.0f});
         model.getEffect("main").setValue(Effect.DIRLIGHTCOLOR01_HANDLE, new float [] {1.0f, 1.0f,0.0f,1.0f});
     }
 
@@ -168,7 +168,7 @@ public class PlaneObject extends GameObject
 
     public void update()
     {
-        //model.translate(0.0f,0.0f,-0.001f);
+        model.translate(0.0f,-0.01f,0.0f);
         model.rotate(0.0f,0.0f,1.0f,1.0f);
     }
 }

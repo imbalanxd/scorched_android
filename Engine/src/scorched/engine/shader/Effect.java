@@ -172,11 +172,23 @@ public class Effect
         GLES20.glUniform1i(getUniformLocation(Effect.TEXTURE01_HANDLE), 0);
     }
 
+    protected void unloadTexture01()
+    {
+        GLES20.glActiveTexture(GLES20.GL_TEXTURE0);
+        GLES20.glBindTexture(GLES20.GL_TEXTURE_2D,0);
+    }
+
     protected void setTexture02()
     {
         GLES20.glActiveTexture(GLES20.GL_TEXTURE1);
         GLES20.glBindTexture(GLES20.GL_TEXTURE_2D,((Texture)(getValue(Effect.TEXTURE02_HANDLE))).getTexture());
         GLES20.glUniform1i(getUniformLocation(Effect.TEXTURE02_HANDLE), 0);
+    }
+
+    protected void unloadTexture02()
+    {
+        GLES20.glActiveTexture(GLES20.GL_TEXTURE1);
+        GLES20.glBindTexture(GLES20.GL_TEXTURE_2D,0);
     }
 
     public int position()
@@ -205,5 +217,10 @@ public class Effect
     {
         setColor();
         setMVP();
+    }
+
+    public void unload()
+    {
+
     }
 }

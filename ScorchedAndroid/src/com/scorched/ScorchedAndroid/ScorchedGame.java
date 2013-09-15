@@ -5,8 +5,11 @@ import android.util.Log;
 import scorched.common.objects.CameraObject;
 import scorched.common.objects.GameObject;
 import scorched.common.objects.PlaneObject;
+import scorched.common.ui.Image;
 import scorched.common.ui.Quad;
 import scorched.engine.Game;
+import scorched.engine.assets.Loader;
+import scorched.engine.geometry.Vector2;
 import scorched.engine.interfaces.IGameObject;
 
 import java.util.Vector;
@@ -30,10 +33,17 @@ public class ScorchedGame extends Game
     {
         super.initGame();
 
-        Quad q = new Quad();
+        Image q = new Image(Loader.loadTexture(R.drawable.ic_launcher));
+        q.setPosition(new Vector2(300,300));
+        q.setPivot(32,32);
+        q.rotate(45.0f);
 
+        Image w = new Image(Loader.loadTexture(R.drawable.icon2));
+        w.setPosition(new Vector2(500,500));
+//
         hud.getScreen().addChild(q);
+        hud.getScreen().addChild(w);
 
-        GameObject go = new PlaneObject(20,20,32,32);
+        //GameObject go = new PlaneObject(20,20,32,32);
     }
 }
