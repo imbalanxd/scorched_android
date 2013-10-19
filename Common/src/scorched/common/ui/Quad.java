@@ -41,23 +41,11 @@ public class Quad extends Sprite
     {
         m_view = new RenderObject();
         m_view.setEffect(new Effect());
-
     }
 
     protected void setProperties()
     {
         m_view.getEffect().setValue(Effect.COLOR_HANDLE, m_color);
-    }
-
-    protected void createObject()
-    {
-        float depth = 0.0f;
-        m_view.setVertices(new Vector3[] {new Vector3(0.0f, 0.0f, depth),
-                new Vector3(m_width,0.0f,depth),
-                new Vector3(m_width,m_height,depth),
-                new Vector3(0.0f,m_height,depth)});
-
-        m_view.setIndices(new int [] {0,1,3,2});
     }
 
     public void setColor(float _r, float _g, float _b, float _a)

@@ -36,9 +36,6 @@
     </option>
     <option name="selection" value="[Full]" />
   </component>
-  <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="init" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" name="Default" comment="" />
     <ignored path="ScorchedAndroid.iws" />
@@ -46,52 +43,59 @@
     <file path="$PROJECT_DIR$/../Engine/res/layout/main.xml" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1374329363823" ignored="false" />
     <file path="/Scorched.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1377027914229" ignored="false" />
     <file path="/fragment.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1375728273837" ignored="false" />
-    <file path="/DefaultRenderer.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1378645772911" ignored="false" />
+    <file path="/DefaultRenderer.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1380382149659" ignored="false" />
     <file path="/DrawableObject.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1374339753825" ignored="false" />
     <file path="$PROJECT_DIR$/../Common/build.xml" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1374340104875" ignored="false" />
     <file path="$PROJECT_DIR$/../Common/AndroidManifest.xml" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1374340104875" ignored="false" />
     <file path="$PROJECT_DIR$/../Common/res/layout/main.xml" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1374340104875" ignored="false" />
     <file path="$PROJECT_DIR$/../Common/.idea/workspace.xml" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1374340105389" ignored="false" />
-    <file path="/GameObject.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1377343478187" ignored="false" />
+    <file path="/GameObject.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1380140761403" ignored="false" />
     <file path="/UpdatableObject.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1375019837620" ignored="false" />
     <file path="/DisplayObject.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1375018776874" ignored="false" />
     <file path="/DefaultShader.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1376688837340" ignored="false" />
     <file path="/Shader.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1374614202404" ignored="false" />
     <file path="/BaseShader.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1376741737598" ignored="false" />
     <file path="/DisplaySurface.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1378645736282" ignored="false" />
-    <file path="/Game.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1379279739683" ignored="false" />
-    <file path="/Dummy.txt" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1376693910923" ignored="false" />
-    <file path="/IRenderObject.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1378844326113" ignored="false" />
-    <file path="/RenderObject.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1379235482196" ignored="false" />
+    <file path="/Game.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1380361155316" ignored="false" />
+    <file path="/Dummy.txt" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1380448880883" ignored="false" />
+    <file path="/IRenderObject.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1379354389390" ignored="false" />
+    <file path="/RenderObject.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1379355438808" ignored="false" />
     <file path="/ModelObject.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1378640179417" ignored="false" />
     <file path="$PROJECT_DIR$/../../AndroidTuts/OpenGLES20Complete/src/com/example/android/opengl/MyGLRenderer.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1375808514607" ignored="false" />
     <file path="/MyGLRenderer.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1375808513767" ignored="false" />
     <file path="/EffectLoader.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1377376480479" ignored="false" />
-    <file path="/Effect.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1379235318424" ignored="false" />
+    <file path="/Effect.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1380448916673" ignored="false" />
     <file path="/TestEffect.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1376742380699" ignored="false" />
     <file path="/EffectManager.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1377365254021" ignored="false" />
     <file path="/PlaneObject.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1377810930209" ignored="false" />
     <file path="/Vector3.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1377714657457" ignored="false" />
     <file path="/CameraObject.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1378644429678" ignored="false" />
-    <file path="/ScorchedGame.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1379279253930" ignored="false" />
+    <file path="/ScorchedGame.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1380360672708" ignored="false" />
     <file path="/ICameraObject.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1378644341691" ignored="false" />
     <file path="/IGameObject.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1377110722724" ignored="false" />
     <file path="/PerlinNoise.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1377549352701" ignored="false" />
     <file path="/Texture.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1379276843215" ignored="false" />
     <file path="/TextureEffect.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1379235462996" ignored="false" />
-    <file path="/a.dummy" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1377353596212" ignored="false" />
+    <file path="/a.dummy" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1380384450394" ignored="false" />
     <file path="/NormalMappedEffect.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1379236594982" ignored="false" />
-    <file path="/HUD.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1379279780495" ignored="false" />
-    <file path="/ISpriteObject.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1378926373038" ignored="false" />
+    <file path="/HUD.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1380361375200" ignored="false" />
+    <file path="/ISpriteObject.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1380406217487" ignored="false" />
     <file path="/SpriteObject.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1378327096669" ignored="false" />
     <file path="/Rectangle.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1378323845024" ignored="false" />
     <file path="/Image.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1379280102465" ignored="false" />
     <file path="/InterfaceControl.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1378553174998" ignored="false" />
     <file path="/InterfaceComponent.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1378584237055" ignored="false" />
     <file path="/Quad.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1378928151643" ignored="false" />
-    <file path="/Sprite.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1379280496625" ignored="false" />
+    <file path="/Sprite.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1380446955315" ignored="false" />
     <file path="/Loader.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1379164434788" ignored="false" />
     <file path="/AssetCache.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1379155037967" ignored="false" />
+    <file path="/Stage.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1380382197546" ignored="false" />
+    <file path="/StageTransition.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1379793472756" ignored="false" />
+    <file path="/StageManager.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1380361130828" ignored="false" />
+    <file path="/TestStage.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1380406530983" ignored="false" />
+    <file path="/ProgressBar.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1380443144631" ignored="false" />
+    <file path="/Vector2.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1380405871586" ignored="false" />
+    <file path="/HitBox.java" changelist="9a5d5dbc-157c-4eb9-b3fa-ef7437e9bbcd" time="1380446969976" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +110,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -121,8 +126,8 @@
         <option name="CONDITION_ENABLED" value="true" />
         <option name="CLASS_FILTERS_ENABLED" value="false" />
         <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="&#13;&#13;JAVA" />
-        <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
       </breakpoint>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -138,12 +143,10 @@
         <option name="CONDITION_ENABLED" value="true" />
         <option name="CLASS_FILTERS_ENABLED" value="false" />
         <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="&#13;&#13;JAVA" />
-        <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -152,170 +155,31 @@
     <favorites_list name="ScorchedAndroid" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.48191294">
+    <splitter split-orientation="horizontal" split-proportion="0.47767586">
       <split-first>
         <leaf>
-          <file leaf-file-name="Game.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/Game.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="25" column="35" selection-start="628" selection-end="628" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="DisplaySurface.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/surface/DisplaySurface.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="16" column="13" selection-start="449" selection-end="449" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ISpriteObject.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/interfaces/ISpriteObject.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="21" column="16" selection-start="539" selection-end="539" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="DefaultRenderer.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/renderer/DefaultRenderer.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="79" column="36" selection-start="2233" selection-end="2260" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="HUD.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/ui/HUD.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="69" column="21" selection-start="1412" selection-end="1412" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CameraObject.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../Common/src/scorched/common/objects/CameraObject.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="23" column="0" selection-start="519" selection-end="519" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="ScorchedGame.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/scorched/ScorchedAndroid/ScorchedGame.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="35" column="36" selection-start="946" selection-end="946" vertical-scroll-proportion="0.0">
+                <state line="27" column="52" selection-start="693" selection-end="693" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Sprite.java" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/ui/Sprite.java">
+          <file leaf-file-name="TestStage.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/scorched/ScorchedAndroid/stages/TestStage.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="180" column="51" selection-start="3951" selection-end="3951" vertical-scroll-proportion="0.5224719">
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Texture.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/texture/Texture.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="91" column="0" selection-start="2796" selection-end="2796" vertical-scroll-proportion="-28.2">
+                <state line="57" column="5" selection-start="1377" selection-end="1377" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Image.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../Common/src/scorched/common/ui/Image.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="56" column="23" selection-start="1230" selection-end="1230" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="Quad.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../Common/src/scorched/common/ui/Quad.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="58" column="44" selection-start="1372" selection-end="1372" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="RenderObject.java" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="RenderObject.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/renderer/RenderObject.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="272" column="50" selection-start="7392" selection-end="7392" vertical-scroll-proportion="0.60644007">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Loader.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/assets/Loader.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="18" column="22" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="AssetCache.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/assets/AssetCache.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="26" column="5" selection-start="597" selection-end="597" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#377#397#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="EffectLoader.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/shader/EffectLoader.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="13" column="13" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="EffectManager.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/shader/EffectManager.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="34" column="26" selection-start="852" selection-end="852" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="IRenderObject.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/interfaces/IRenderObject.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="53" column="53" selection-start="1786" selection-end="1786" vertical-scroll-proportion="0.0">
+                <state line="321" column="65" selection-start="9413" selection-end="9413" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -324,27 +188,110 @@
           <file leaf-file-name="Effect.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/shader/Effect.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="180" column="45" selection-start="5785" selection-end="5785" vertical-scroll-proportion="0.0">
+                <state line="130" column="28" selection-start="3948" selection-end="3948" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Scorched.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/scorched/ScorchedAndroid/Scorched.java">
+          <file leaf-file-name="Sprite.java" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/ui/Sprite.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="19" column="0" selection-start="535" selection-end="535" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <element signature="imports" expanded="false" />
-                  </folding>
+                <state line="261" column="5" selection-start="5987" selection-end="5987" vertical-scroll-proportion="1.2773536">
+                  <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="NormalMappedEffect.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../Common/src/scorched/common/shaders/NormalMappedEffect.java">
+          <file leaf-file-name="HitBox.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/ui/HitBox.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="26" column="60" selection-start="865" selection-end="865" vertical-scroll-proportion="0.0">
+                <state line="35" column="36" selection-start="745" selection-end="745" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ISpriteObject.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/interfaces/ISpriteObject.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="12" column="17" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="StageTransition.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/stage/StageTransition.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="15" column="5" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="DefaultRenderer.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/renderer/DefaultRenderer.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="34" column="19" selection-start="899" selection-end="899" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="HUD.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/ui/HUD.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="31" column="30" selection-start="787" selection-end="787" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="StageManager.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/stage/StageManager.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="29" column="0" selection-start="548" selection-end="548" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Stage.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/stage/Stage.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="115" column="43" selection-start="2292" selection-end="2292" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Game.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/Game.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="33" column="43" selection-start="878" selection-end="878" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Quad.java" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/../Common/src/scorched/common/ui/Quad.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="48" column="5" selection-start="1073" selection-end="1073" vertical-scroll-proportion="1.3864734">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ProgressBar.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../Common/src/scorched/common/ui/ProgressBar.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="35" column="1" selection-start="771" selection-end="771" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -362,22 +309,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../Engine/src/scorched/engine/interfaces/ISpriteObject.java" />
-        <option value="$PROJECT_DIR$/../Common/src/scorched/common/ui/Quad.java" />
-        <option value="$PROJECT_DIR$/../Engine/src/scorched/engine/interfaces/IResource.java" />
-        <option value="$PROJECT_DIR$/../Engine/src/scorched/engine/assets/AssetCache.java" />
-        <option value="$PROJECT_DIR$/../Engine/src/scorched/engine/assets/Loader.java" />
-        <option value="$PROJECT_DIR$/../Common/src/scorched/common/objects/PlaneObject.java" />
-        <option value="$PROJECT_DIR$/../Engine/src/scorched/engine/shader/Effect.java" />
-        <option value="$PROJECT_DIR$/../Common/src/scorched/common/shaders/TextureEffect.java" />
-        <option value="$PROJECT_DIR$/../Common/src/scorched/common/shaders/NormalMappedEffect.java" />
-        <option value="$PROJECT_DIR$/../Engine/src/scorched/engine/texture/Texture.java" />
         <option value="$PROJECT_DIR$/src/com/scorched/ScorchedAndroid/ScorchedGame.java" />
-        <option value="$PROJECT_DIR$/../Engine/src/scorched/engine/renderer/RenderObject.java" />
+        <option value="$PROJECT_DIR$/../Engine/src/scorched/engine/stage/StageManager.java" />
         <option value="$PROJECT_DIR$/../Engine/src/scorched/engine/ui/HUD.java" />
-        <option value="$PROJECT_DIR$/../Common/src/scorched/common/ui/Image.java" />
+        <option value="$PROJECT_DIR$/../Engine/src/scorched/engine/stage/Stage.java" />
+        <option value="$PROJECT_DIR$/../Engine/src/scorched/engine/renderer/DefaultRenderer.java" />
         <option value="$PROJECT_DIR$/../Engine/src/scorched/engine/Game.java" />
+        <option value="$PROJECT_DIR$/../Engine/src/scorched/engine/stage/StageTransition.java" />
+        <option value="$PROJECT_DIR$/../Engine/src/scorched/engine/geometry/Vector2.java" />
+        <option value="$PROJECT_DIR$/../Engine/src/scorched/engine/interfaces/ISpriteObject.java" />
+        <option value="$PROJECT_DIR$/../Common/src/scorched/common/ui/ProgressBar.java" />
         <option value="$PROJECT_DIR$/../Engine/src/scorched/engine/ui/Sprite.java" />
+        <option value="$PROJECT_DIR$/../Engine/src/scorched/engine/ui/HitBox.java" />
+        <option value="$PROJECT_DIR$/src/com/scorched/ScorchedAndroid/stages/TestStage.java" />
+        <option value="$PROJECT_DIR$/../Engine/src/scorched/engine/shader/Effect.java" />
+        <option value="$PROJECT_DIR$/../Engine/src/scorched/engine/renderer/RenderObject.java" />
+        <option value="$PROJECT_DIR$/../Common/src/scorched/common/ui/Quad.java" />
       </list>
     </option>
   </component>
@@ -416,6 +363,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -433,101 +381,19 @@
               <option name="myItemId" value="ScorchedAndroid" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ScorchedAndroid" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ScorchedAndroid" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="&lt; Android 4.2.2 Platform &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="ScorchedAndroid" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ScorchedAndroid" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ScorchedAndroid" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ScorchedAndroid" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable-xhdpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ScorchedAndroid" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ScorchedAndroid" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable-mdpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ScorchedAndroid" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ScorchedAndroid" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable-ldpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ScorchedAndroid" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ScorchedAndroid" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable-hdpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -577,72 +443,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ScorchedAndroid" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="texture" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ScorchedAndroid" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shader" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ScorchedAndroid" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="renderer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -674,28 +474,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ScorchedAndroid" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -739,36 +517,9 @@
               <option name="myItemId" value="common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shaders" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ScorchedAndroid" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="objects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -784,6 +535,7 @@
     <property name="AndroidLayoutSelectedEditor" value="android-designer" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
@@ -993,30 +745,30 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1928" height="1044" extended-state="6" />
+    <frame x="-4" y="-4" width="1928" height="1044" extended-state="7" />
     <editor active="false" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.67483294" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.67483294" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.70856506" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2516704" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32405347" sideWeight="0.708111" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28277355" sideWeight="0.28020832" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28285077" sideWeight="0.71979165" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26280624" sideWeight="0.71979165" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.67741936" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12966916" sideWeight="0.67483294" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32516703" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12753469" sideWeight="0.48997772" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5100223" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.67483294" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.67483294" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2516704" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.67074525" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1090,119 +842,113 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/shader/Effect.java">
+    <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="180" column="45" selection-start="5785" selection-end="5785" vertical-scroll-proportion="0.0">
+        <state line="33" column="43" selection-start="878" selection-end="878" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Common/src/scorched/common/shaders/NormalMappedEffect.java">
+    <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/stage/Stage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="60" selection-start="865" selection-end="865" vertical-scroll-proportion="0.0">
+        <state line="115" column="43" selection-start="2292" selection-end="2292" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Common/src/scorched/common/objects/GameObject.java">
+    <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/geometry/Vector2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="364" selection-end="364" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Common/src/scorched/common/shaders/TextureEffect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="93" selection-start="1204" selection-end="1204" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Common/src/scorched/common/objects/CameraObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="519" selection-end="519" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/renderer/RenderObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="272" column="50" selection-start="7392" selection-end="7392" vertical-scroll-proportion="0.60644007">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/interfaces/IResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="4" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/surface/DisplaySurface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="13" selection-start="449" selection-end="449" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/texture/Texture.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="0" selection-start="2796" selection-end="2796" vertical-scroll-proportion="-28.2">
+        <state line="33" column="34" selection-start="528" selection-end="528" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/scorched/ScorchedAndroid/ScorchedGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="36" selection-start="946" selection-end="946" vertical-scroll-proportion="0.0">
+        <state line="27" column="52" selection-start="693" selection-end="693" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/ui/HUD.java">
+    <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/stage/StageTransition.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="21" selection-start="1412" selection-end="1412" vertical-scroll-proportion="0.0">
+        <state line="15" column="5" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Common/src/scorched/common/ui/ProgressBar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="1" selection-start="771" selection-end="771" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/interfaces/ISpriteObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="16" selection-start="539" selection-end="539" vertical-scroll-proportion="0.0">
+        <state line="12" column="17" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Common/src/scorched/common/ui/Image.java">
+    <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/ui/HitBox.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="23" selection-start="1230" selection-end="1230" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="35" column="36" selection-start="745" selection-end="745" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-17/android/opengl/GLSurfaceView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="682" column="21" selection-start="26277" selection-end="26277" vertical-scroll-proportion="0.33235726" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/renderer/DefaultRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="36" selection-start="2233" selection-end="2260" vertical-scroll-proportion="0.0">
+        <state line="34" column="19" selection-start="899" selection-end="899" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/Game.java">
+    <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/shader/Effect.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="35" selection-start="628" selection-end="628" vertical-scroll-proportion="0.0">
+        <state line="130" column="28" selection-start="3948" selection-end="3948" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/renderer/RenderObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="321" column="65" selection-start="9413" selection-end="9413" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/scorched/ScorchedAndroid/stages/TestStage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="5" selection-start="1377" selection-end="1377" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/ui/Sprite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="180" column="51" selection-start="3951" selection-end="3951" vertical-scroll-proportion="0.5224719">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="261" column="5" selection-start="5987" selection-end="5987" vertical-scroll-proportion="1.2773536">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Engine/src/scorched/engine/ui/HUD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="30" selection-start="787" selection-end="787" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Common/src/scorched/common/ui/Quad.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="5" selection-start="1073" selection-end="1073" vertical-scroll-proportion="1.3864734">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -7,6 +7,8 @@ import android.util.Log;
 import android.view.WindowManager;
 import scorched.engine.assets.Loader;
 import scorched.engine.interfaces.IGameObject;
+import scorched.engine.stage.Stage;
+import scorched.engine.stage.StageManager;
 import scorched.engine.surface.DisplaySurface;
 import scorched.engine.ui.HUD;
 
@@ -23,11 +25,10 @@ import java.util.Vector;
  */
 public class Game
 {
-    private int MAX_FPS = 40;
+    private int MAX_FPS = 30;
 
-    public static Vector<IGameObject> gameObjects;
-    public static HUD hud;
     public static Display display;
+    private static StageManager stageManager;
 
     public static long frameTimeElapsed = 0;
     public static long frameTimeStart = 0;
@@ -45,8 +46,8 @@ public class Game
 
         display = ((WindowManager)(context.getSystemService(Context.WINDOW_SERVICE))).getDefaultDisplay();
 
-        gameObjects = new Vector<IGameObject>();
-        hud = new HUD();
+        stageManager = new StageManager();
+        stageManager.setup();
     }
 
     protected void setup(Context _context)
@@ -62,9 +63,6 @@ public class Game
     public void initGame()
     {
         Log.d("SCORCHED", "Game::Initialised");
-
-
-        hud.createScreen("main");
 
         frameTimeStart = System.currentTimeMillis();
     }
@@ -99,16 +97,44 @@ public class Game
 
     private void update()
     {
-        //Log.d("SCORCHED", "Game:Update");
-        for(IGameObject object : gameObjects)
-        {
-            object.update();
-        }
-        Game.hud.update();
+        getCurrentStage().update();
     }
 
-    public static void addGameObject(IGameObject object)
+    public static void activateStage(String _name)
     {
-        gameObjects.add(object);
+        stageManager.activateStage(_name);
+    }
+
+    public static StageManager getStageManager()
+    {
+        return stageManager;
+    }
+
+    public static Stage getCurrentStage()
+    {
+        return stageManager.getCurrentStage();
+    }
+
+    public static Vector<IGameObject> getGameObjects()
+    {
+        return stageManager.getCurrentStage().getGameObjects();
+    }
+
+    public static void addGameObject(IGameObject _object)
+    {
+        addGameObject(_object, stageManager.getCurrentStage());
+    }
+
+    public static void addGameObject(IGameObject _object, Stage _stage)
+    {
+        synchronized (_stage)
+        {
+            _stage.addGameObject(_object);
+        }
+    }
+
+    public static HUD getHUD()
+    {
+        return stageManager.getCurrentStage().getHud();
     }
 }

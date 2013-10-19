@@ -29,4 +29,10 @@ public class Vector2
         x+=_x;
         y+=_y;
     }
+
+    public void add(Vector2 _b)
+    {
+        x+= _b.x;
+        y+= _b.y;
+    }
 }

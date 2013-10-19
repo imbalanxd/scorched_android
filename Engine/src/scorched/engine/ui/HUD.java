@@ -29,6 +29,7 @@ public class HUD
         m_height = screenSize.y;
 
         m_screens = new HashMap<String, ISpriteObject>();
+        createScreen("main");
     }
 
     public void addChild()

@@ -1,5 +1,6 @@
 package scorched.engine.ui;
 
+import android.graphics.RectF;
 import scorched.engine.geometry.Rectangle;
 import scorched.engine.geometry.Vector2;
 import scorched.engine.geometry.Vector3;
@@ -33,6 +34,8 @@ public class Sprite implements ISpriteObject
     private boolean m_sizeChanged = true;
     private boolean m_positionChanged = true;
     private boolean m_propertiesChanged = true;
+
+    private HitBox m_hitbox = new HitBox(0.0f,0.0f,0.0f,0.0f);
 
     public Sprite()
     {
@@ -69,6 +72,12 @@ public class Sprite implements ISpriteObject
         m_sizeChanged = true;
     }
 
+    public void setWidth(float _width)
+    {
+        m_width = (int)_width;
+        m_sizeChanged = true;
+    }
+
     public int getWidth()
     {
         return m_width;
@@ -77,6 +86,12 @@ public class Sprite implements ISpriteObject
     public void setHeight(int _height)
     {
         m_height = _height;
+        m_sizeChanged = true;
+    }
+
+    public void setHeight(float _height)
+    {
+        m_height = (int)_height;
         m_sizeChanged = true;
     }
 
@@ -95,18 +110,24 @@ public class Sprite implements ISpriteObject
         setPivot((int)_pivot.x ,(int)_pivot.y);
     }
 
+    public void setPosition(float _x, float _y)
+    {
+        setPosition((int)_x, (int)_y);
+    }
+
     public void setPosition(int _x, int _y)
     {
         m_position = new Vector2(_x, _y);
-        m_positionChanged = true;
+        positionChanged();
     }
 
     public void setPivot(int _x, int _y)
     {
         m_pivot = new Vector2(_x, _y);
-        m_positionChanged = true;
+        positionChanged();
     }
 
+    //TODO position changed for rotations
     public void rotate(float _rot)
     {
         m_rotation += _rot;
@@ -127,6 +148,14 @@ public class Sprite implements ISpriteObject
     public Vector2 getPosition()
     {
         return m_position;
+    }
+
+    public Vector2 getAbsolutePosition()
+    {
+        Vector2 absolutePosition = new Vector2(this.m_position.x, this.m_position.y);
+        if(m_parent != null)
+            absolutePosition.add(m_parent.getAbsolutePosition());
+        return absolutePosition;
     }
 
     public Vector2 getPivot()
@@ -166,8 +195,23 @@ public class Sprite implements ISpriteObject
     }
 
     @Override
-    public void draw(ICameraObject _camera) {
+    public void positionChanged()
+    {
+        m_positionChanged = true;
+        for (ISpriteObject child : m_children)
+        {
+            child.positionChanged();
+        }
+    }
 
+    @Override
+    public void sizeChanged() {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void draw(ICameraObject _camera)
+    {
         if(m_view != null)
         {
             if(m_sizeChanged)
@@ -180,9 +224,9 @@ public class Sprite implements ISpriteObject
             {
                 //TODO do the pivot properly
                 m_view.setRotation(new Vector3(0.0f, 0.0f, m_rotation));
-                m_view.setTranslation(new Vector3(-m_pivot.x, -m_pivot.y, 0.0f));
-
-                m_view.translate(m_position.x,m_position.y,-2.0f);
+                m_view.setOrigin(new Vector3(-m_pivot.x, -m_pivot.y, 0.0f));
+                Vector2 absolutePosition = getAbsolutePosition();
+                m_view.setTranslation(new Vector3(absolutePosition.x,absolutePosition.y,-2.0f));
 
 
                 m_positionChanged = false;
@@ -216,6 +260,7 @@ public class Sprite implements ISpriteObject
 
     protected void createObject()
     {
+        m_hitbox.setDimensions(m_position.x, m_position.y, m_width, m_height);
         float depth = 0.0f;
         m_view.setVertices(new Vector3[] {new Vector3(0.0f, 0.0f, depth),
                 new Vector3(m_width,0.0f,depth),

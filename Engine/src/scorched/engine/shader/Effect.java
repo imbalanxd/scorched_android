@@ -121,7 +121,15 @@ public class Effect
         if(handle == -1)
         {
             handle = GLES20.glGetAttribLocation(getProgram(), id);
-            DefaultRenderer.checkGlError("glGetAttribLocation");
+            try
+            {
+                DefaultRenderer.checkGlError("glGetAttribLocation");
+            }
+            catch(RuntimeException _e)
+            {
+                Log.d("SCORCHED RUN", id+" does not exist in shader");
+                handle = -2;
+            }
             setHandle(id, handle);
         }
         //Log.d("SCORCHED", "Attribute Location "+id+" = "+handle);

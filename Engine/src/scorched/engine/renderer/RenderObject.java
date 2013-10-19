@@ -44,6 +44,7 @@ public class RenderObject implements IRenderObject
     //Shader assigned to this object
     protected Effect effect;
 
+    Vector3 m_origin = new Vector3();
     Vector3 m_position = new Vector3();
     Vector3 m_rotation = new Vector3();
     private boolean m_dirty = true;
@@ -256,6 +257,11 @@ public class RenderObject implements IRenderObject
         changed();
     }
 
+    @Override
+    public void setOrigin(Vector3 _origin) {
+        m_origin = _origin;
+    }
+
     private void changed()
     {
         m_dirty = true;
@@ -270,9 +276,14 @@ public class RenderObject implements IRenderObject
         float [] trans = new float[16];
         Matrix.setIdentityM(rot, 0);
         Matrix.setIdentityM(trans, 0);
+
+        Matrix.translateM(trans, 0, m_origin.x,m_origin.y,m_origin.z);
         Matrix.rotateM(rot, 0,m_rotation.z, 0.0f,0.0f,1.0f);
+        Matrix.multiplyMM(m_transform, 0, rot   , 0,trans , 0);
+
+        Matrix.setIdentityM(trans, 0);
         Matrix.translateM(trans, 0, m_position.x,m_position.y,m_position.z);
-        Matrix.multiplyMM(m_transform, 0, trans   , 0,rot , 0);
+        Matrix.multiplyMM(m_transform, 0, trans   , 0,m_transform , 0);
 
         m_dirty = false;
     }
@@ -292,7 +303,7 @@ public class RenderObject implements IRenderObject
 
         effect.activate();
 
-        if(vertexBuffer != null)
+        if(effect.getAttributeLocation(Effect.VERTEX_HANDLE) >= 0)
         {
             GLES20.glEnableVertexAttribArray(effect.getAttributeLocation(Effect.VERTEX_HANDLE));
             GLES20.glVertexAttribPointer(effect.getAttributeLocation(Effect.VERTEX_HANDLE), vertexSize,
@@ -301,14 +312,14 @@ public class RenderObject implements IRenderObject
             DefaultRenderer.checkGlError("glVertexAttribPointer");
             Log.d("SCORCHED RUN", "Vertices sent");
         }
-        if(texCoordBuffer != null)
+        if(effect.getAttributeLocation(Effect.TEXCOORD_HANDLE) >= 0)
         {
             GLES20.glEnableVertexAttribArray(effect.getAttributeLocation(Effect.TEXCOORD_HANDLE));
             GLES20.glVertexAttribPointer(effect.getAttributeLocation(Effect.TEXCOORD_HANDLE), texCoordSize,
                     GLES20.GL_FLOAT, false,
                     texCoordSize * 4, texCoordBuffer);
         }
-        if(normalBuffer != null)
+        if(effect.getAttributeLocation(Effect.NORMAL_HANDLE) >= 0)
         {
             GLES20.glEnableVertexAttribArray(effect.getAttributeLocation(Effect.NORMAL_HANDLE));
             GLES20.glVertexAttribPointer(effect.getAttributeLocation(Effect.NORMAL_HANDLE), normalSize,

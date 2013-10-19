@@ -58,26 +58,12 @@ public class DefaultRenderer implements Renderer
         Matrix.setIdentityM(m_hudCamera.getModelView(), 0);
     }
 
-    public void onUpdateFrame()
-    {
-        for(IGameObject object : Game.gameObjects)
-        {
-            object.update();
-        }
-    }
-
     @Override
     public void onDrawFrame(GL10 gl)
     {
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT | GLES20.GL_DEPTH_BUFFER_BIT);
 
-
-        for(IGameObject object : Game.gameObjects)
-        {
-            object.draw(m_camera);
-        }
-
-        Game.hud.draw(m_hudCamera);
+        Game.getCurrentStage().draw(m_camera, m_hudCamera);
     }
 
     public static void checkGlError(String glOperation) {
